@@ -11,7 +11,7 @@ const sosRoutes = require('./routes/sos.controller');
 const app = express();
 const server = http.createServer(app);
 const io = new Server(server, {
-  cors: { origin: 'http://localhost:3000', methods: ['GET', 'POST'] }
+  cors: { origin: '*', methods: ['GET', 'POST'] }
 });
 
 const peers = new Map();
@@ -48,7 +48,7 @@ io.on('connection', (socket) => {
   });
 });
 
-app.use(cors());
+app.use(cors({ origin: '*' }));
 app.use(express.json());
 
 app.use('/api/auth', authRoutes);
