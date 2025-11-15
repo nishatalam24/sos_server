@@ -1,11 +1,11 @@
 const express = require('express');
 const axios = require('axios');
 // const Emergency = require('../models/emergency.model');
-const Emergency = require('../models/emergency.model');
+const Emergency = require('../Models/emergency.model');
 // const User = require('../models/user.model');
-const User = require('../models/user.model');
+const User = require('../Models/user.model');
 // const auth = require('../middleware/auth');
-const auth = require('../middleware/auth');
+const auth = require('../Middleware/auth');
 
 const router = express.Router();
 
