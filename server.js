@@ -58,6 +58,11 @@ app.get('/', (_req, res) => {
   res.json({ message: 'SOS API running' });
 });
 
+app.get('/test', (_req, res) => {
+  res.send('<h1>Test endpoint working</h1>');
+});
+
+
 mongoose
   .connect(process.env.MONGODB_URI)
   .then(() => console.log('MongoDB connected'))
